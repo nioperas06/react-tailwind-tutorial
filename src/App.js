@@ -1,9 +1,10 @@
 import './App.css';
 import React from 'react';
-import Header from './components/Header';
 import Product from './components/Product';
 import Loader from './components/Loader';
-import Banner from './components/Banner';
+import Search from './components/Search';
+
+
 
 
 function App() {
@@ -17,12 +18,12 @@ function App() {
     }, []);
 
     return (
+      
+
         <div>
-            <Header />
 
             <div className='max-w-2xl mx-auto lg:max-w-7xl'>
-
-                <Banner />
+                 
 
                 {
                     products.length === 0 ? (
@@ -33,8 +34,8 @@ function App() {
                         <div className="flex flex-wrap -mx-3 overflow-hidden">
 
                             <div className="my-3 px-3 overflow-hidden sm:w-1/3 md:w-1/3 lg:w-1/3 xl:w-1/3">
-                                Filtres
-                            </div>
+                                <Search/>
+                           </div>
 
                             <div className="my-3 px-3 overflow-hidden sm:w-2/3 md:w-2/3 lg:w-2/3 xl:w-2/3">
                                 <div className='grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8'>
@@ -54,9 +55,20 @@ function App() {
                     )
                 }
             </div>
-        </div>
+        </div>  
+
+
+
     );
 }
 
 
 export default App;
+
+
+
+
+
+
+
+
